@@ -37,8 +37,8 @@ def load_artifacts():
 
     with open(THRESHOLD_PATH) as f:
         data = json.load(f)
-    # expects {"p95": ..., "p99": ...} — we use p95 as the default threshold
-    threshold = data["p95"]
+
+    threshold = data.get("threshold")
     print(f"Threshold (p95): {threshold:.6f}")
 
 
