@@ -1,11 +1,13 @@
 import base64
 import io
-
+import os
+from dotenv import load_dotenv
 import requests
 import streamlit as st
 from PIL import Image
 
-BACKEND_URL = "http://localhost:8000"
+load_dotenv()
+BACKEND_URL = os.getenv("BACKEND_URL")
 
 st.set_page_config(
     page_title="DinoInspect",
@@ -297,7 +299,7 @@ else:
         <div class="m-value">{score:.6f}</div>
       </div>
       <div class="metric-cell">
-        <div class="m-label">Threshold (p95)</div>
+        <div class="m-label">Threshold (p92)</div>
         <div class="m-value">{threshold:.6f}</div>
       </div>
       <div class="metric-cell">
