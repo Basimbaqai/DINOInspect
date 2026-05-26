@@ -39,7 +39,7 @@ def load_artifacts():
         data = json.load(f)
 
     threshold = data.get("threshold")
-    print(f"Threshold (p95): {threshold:.6f}")
+    print(f"Threshold (p92): {threshold:.6f}")
 
 
 # ── Patch embedding extraction (mirrors notebook exactly) ─────────────────
